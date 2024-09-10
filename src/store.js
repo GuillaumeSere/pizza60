@@ -1,8 +1,8 @@
 import {combineReducers }from 'redux';
 import { applyMiddleware} from 'redux';
 import { legacy_createStore as createStore} from 'redux'
-import thunk from 'redux-thunk';
-import {composeWithDevTools} from 'redux-devtools-extension';
+import {thunk} from 'redux-thunk';
+import {composeWithDevTools} from '@redux-devtools/extension/lib/cjs/index';
 import { getAllPizzasReducer } from './reducers/pizzaReducers';
 import { cartReducer } from './reducers/cartReducer';
 import { loginUserReducer, registerUserReducer } from './reducers/userReducer';
