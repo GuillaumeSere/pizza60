@@ -5,7 +5,7 @@ export const getAllPizzas = () => async dispatch => {
     dispatch({type: 'GET_PIZZAS_REQUEST'})
 
     try{
-        const response = await axios.get('http://localhost:8000/pizzas/getallpizzas')
+        const response = await axios.get('https://web-production-a7dc.up.railway.app/pizzas/getallpizzas')
         console.log(response)
         dispatch({type: 'GET_PIZZAS_SUCCESS', payload : response.data})
     } catch (error) {

@@ -56,7 +56,7 @@ const Pizza = ({ pizza }) => {
                 </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton className='modul'>
                     <Modal.Title>{pizza.name}</Modal.Title>
                 </Modal.Header>
