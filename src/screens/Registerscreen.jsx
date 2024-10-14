@@ -37,7 +37,7 @@ const Registerscreen = () => {
                     {loading && (<Loading />)}
                     {success && (<Success success='Utilisateur enregistré' />)}
                     {error && (<Error error='Email invalide' />)}
-                    <h2>INSCRIPTION</h2>
+                    <h2 className='text-center'>INSCRIPTION</h2>
                     <div>
                         <input
                             type="text"

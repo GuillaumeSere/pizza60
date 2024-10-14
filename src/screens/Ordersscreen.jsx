@@ -17,7 +17,7 @@ const Ordersscreen = () => {
 
     return (
         <div className='bg-content'>
-            <div className="row mt-5 sm-8 md-5 lg-5 xl-5 title-order">
+            <div className="row mt-8 sm-8 md-5 lg-5 xl-5 title-order">
                 <h2 style={{ fontSize: '35px', textAlign:'center' }}>Ma Commande</h2> <hr/>
                 {loading && (<Loading />)}
                 {error && (<Error error="une erreur est survenu" />)}

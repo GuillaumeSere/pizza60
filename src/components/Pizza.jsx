@@ -23,8 +23,8 @@ const Pizza = ({ pizza }) => {
         <div style={{ margin: "100px" }} className="shadow-lg p-3 mb-5 rounded">
 
             <div onClick={handleShow}>
-                <h1>{pizza.name}</h1>
-                <img src={pizza.image} className="img-fluid" style={{ height: '200px', width: '200px' }} alt="pizza" />
+                <h1><u>{pizza.name}</u></h1>
+                <img src={pizza.image} className="img-fluid" style={{ height: '200px', width: '200px', borderRadius:'50%' }} alt="pizza" />
             </div>
 
             <div className='flex-container'>

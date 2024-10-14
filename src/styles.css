@@ -184,6 +184,12 @@ b{
     color: rgb(184, 44, 44);
 }
 
+@media (max-width: 1468px){
+    .title-order{
+        margin-top: 10rem !important;
+    }
+}
+
 @media (max-width: 1400px){
    .row{
     display: flex;
@@ -209,6 +215,7 @@ b{
         border-radius: .5rem;
         margin-top: 1rem;
         border: 2px solid brown;
+        z-index: 1000;
     }
 
     .flex-container h1{
@@ -231,9 +238,9 @@ b{
     }
 
     .title-order{
-        margin-top: 5rem !important;
+        margin-bottom: 13rem;
+        margin-top: 11rem !important;
         width: 90% !important;
-        height: 100vh;
     }
 
  }

@@ -15,7 +15,7 @@ const Cartscreen = () => {
         <div className='bg-content'>
             <div className='row justify-content-center title-cart'>
                 <div className="col-md-6">
-                    <h2 style={{ fontSize: "40px", marginBottom: "2rem" }}>Votre commande</h2>
+                    <h2 style={{ fontSize: "40px", marginBottom: "2rem" }}> Votre commande</h2>
 
                     {cartItems.map((item, index) => {
                         return <div className="flex-container" key={index}>
@@ -31,7 +31,7 @@ const Cartscreen = () => {
                             </div>
 
                             <div className='m-1 w-100'>
-                                <img src={item.image} style={{ height: '80px', width: '80px' }} alt="" />
+                                <img src={item.image} style={{ height: '80px', width: '80px', borderRadius:'50%' }} alt="" />
                             </div>
 
                             <div className='m-1 w-100'>
