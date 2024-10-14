@@ -17,12 +17,12 @@ const Ordersscreen = () => {
 
     return (
         <div className='bg-content'>
-            <div className="row title-order">
-                <h2 style={{ fontSize: '35px' }}>Ma Commande</h2> <hr/>
+            <div className="row mt-5 sm-8 md-5 lg-5 xl-5 title-order">
+                <h2 style={{ fontSize: '35px', textAlign:'center' }}>Ma Commande</h2> <hr/>
                 {loading && (<Loading />)}
                 {error && (<Error error="une erreur est survenu" />)}
                 {orders && orders.map((order, index) => {
-                    return <div key={index} style={{background: 'grey', borderRadius: '.5rem'}}>
+                    return <div key={index} style={{background: 'white', borderRadius: '.5rem'}}>
                         <div className="flex-container order">
                             <div style={{marginTop: '1rem'}}>
                                 <h2 style={{ fontSize: '25px' }}>Mes Pizzas</h2><hr/>
