@@ -1,12 +1,14 @@
 import axios from 'axios';
+import { resetCart } from './cartActions';
 
 export const registerUser = (user) => async dispatch => {
 
     dispatch({type: 'USER_REGISTER_REQUEST'})
 
     try {
-      const response = await axios.post('https://web-production-a7dc.up.railway.app/users/register', user)
-        dispatch({type: 'USER_REGISTER_SUCCESSS', payload: response})
+      const response = await axios.post('http://localhost:8000/users/register', user)
+        dispatch({type: 'USER_REGISTER_SUCCESS', payload: response.data})
+        window.location.href = '/login'
     } catch (error) {
         dispatch({type: 'USER_REGISTER_FAILED', payload: error})
     }
@@ -17,7 +19,7 @@ export const loginUser = (user) => async dispatch => {
     dispatch({type: 'USER_LOGIN_REQUEST'})
 
     try {
-      const response = await axios.post('https://web-production-a7dc.up.railway.app/users/login', user)
+      const response = await axios.post('http://localhost:8000/users/login', user)
         dispatch({type: 'USER_LOGIN_SUCCESSS', payload: response.data})
         localStorage.setItem('currentUser', JSON.stringify(response.data))
         window.location.href= '/'
@@ -27,7 +29,7 @@ export const loginUser = (user) => async dispatch => {
 }
 
 export const logoutUser = () => dispatch => {
-
+    dispatch(resetCart())
     localStorage.removeItem('currentUser')
     window.location.href='/login'
 }

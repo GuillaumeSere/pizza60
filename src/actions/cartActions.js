@@ -1,7 +1,7 @@
 export const addToCart = (pizza, quantity, varient) => (dispatch, getState) => {
 
     let cartItem = {
-        _id: pizza._id,
+        _id: `${pizza.name}-${varient}`,
         name: pizza.name,
         image: pizza.image,
         varient: varient,
@@ -24,4 +24,9 @@ export const deleteFromCart = (pizza) => (dispatch, getState) => {
     dispatch({ type: 'DELETE_FROM_CART', payload: pizza })
     const cartItems = getState().cartReducer.cartItems
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
+}
+
+export const resetCart = () => (dispatch) => {
+    dispatch({ type: 'RESET_CART' })
+    localStorage.removeItem('cartItems')
 }

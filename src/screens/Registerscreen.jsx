@@ -16,18 +16,22 @@ const Registerscreen = () => {
 
     const dispatch = useDispatch();
 
-    const register = () => {
+    const register = (e) => {
+        e.preventDefault();
         if (password !== cpassword){
-            alert("les mots de passe ne sont pas identiques")
-        }else{
-            const user = {
-                name,
-                email,
-                password
-            }
-            console.log(user)
-            dispatch(registerUser(user))
+            alert("Les mots de passe ne sont pas identiques")
+            return;
         }
+        if (!name || !email || !password) {
+            alert("Veuillez remplir tous les champs")
+            return;
+        }
+        const user = {
+            name,
+            email,
+            password
+        }
+        dispatch(registerUser(user))
     }
 
     return (
@@ -35,10 +39,10 @@ const Registerscreen = () => {
             <div className="row title-register">
                 <div className="col-md-5">
                     {loading && (<Loading />)}
-                    {success && (<Success success='Utilisateur enregistré' />)}
-                    {error && (<Error error='Email invalide' />)}
+                    {success && (<Success success='Utilisateur enregistré avec succès' />)}
+                    {error && (<Error error={error.response?.data?.message || 'Une erreur est survenue lors de l\'inscription'} />)}
                     <h2 className='text-center'>INSCRIPTION</h2>
-                    <div>
+                    <form onSubmit={register}>
                         <input
                             type="text"
                             placeholder='nom'
@@ -71,10 +75,9 @@ const Registerscreen = () => {
                             onChange={(e) => { setCpassword(e.target.value) }}
                             required
                         />
-                        <button className='btn mt-5' onClick={register}>VALIDER</button>
+                        <button type="submit" className='btn mt-5'>VALIDER</button>
                         <a href="/login" style={{display: 'flex', marginTop: '1rem', color: 'black', justifyContent: 'center'}}>Cliquez ici pour vous identifier</a>
-                    </div>
-
+                    </form>
                 </div>
             </div>
         </div>

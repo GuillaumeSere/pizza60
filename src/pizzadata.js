@@ -1,4 +1,4 @@
-const pizzas = [
+export const pizzas = [
     {
         "name": "Pepper Barbecue Chicken",
         "varients": [
@@ -68,7 +68,7 @@ const pizzas = [
         ],
         "category": "veg",
         "image": "https://www.dominos.fr/media/g0nds4dr/800x800_pizzsupplus_4fromages.jpg",
-        "description": "Sauce tomate, mozzarella, chèvre, Emmental, Fourme d’Ambert A.O.P."
+        "description": "Sauce tomate, mozzarella, chèvre, Emmental, Fourme d'Ambert A.O.P."
     },
     {
         "name": "Reine",
@@ -158,8 +158,6 @@ const pizzas = [
         ],
         "category": "veg",
         "image": "https://vegconom.de/vegconomistfr/wp-content/uploads/sites/12/2021/04/Pizza-Vegan-Peppina-dominos.jpg",
-        "description": "émincé végétal rôti. Il s’agit d’une alternative au poulet faite à base d’huile de tournesol et de protéine de soja"
+        "description": "émincé végétal rôti. Il s'agit d'une alternative au poulet faite à base d'huile de tournesol et de protéine de soja"
     }
 ]
-
-export default pizzas;
