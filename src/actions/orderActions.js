@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.REACT_APP_PUBLIC_API_URL || 'http://localhost:8000';
 
 export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
 

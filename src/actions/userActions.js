@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { resetCart } from './cartActions';
 
-const API_URL = process.env.REACT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.REACT_APP_PUBLIC_API_URL || 'http://localhost:8000';
 
 export const registerUser = (user) => async dispatch => {
 
