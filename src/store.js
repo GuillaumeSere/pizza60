@@ -33,7 +33,7 @@ const initialState = {
     loginUserReducer: {
         currentUser
     }
-};
+}
 
 // Apply middleware
 const middleware = [thunk];
@@ -43,6 +43,6 @@ const store = createStore(
     finalReducer,
     initialState,
     composeWithDevTools(applyMiddleware(...middleware)) // Use composeWithDevTools to wrap middleware
-);
+)
 
 export default store;
